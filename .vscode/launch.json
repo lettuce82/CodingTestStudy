@@ -1,0 +1,61 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "CodingTestStudy_cdeacc5f",
+            "args": [
+                "<",
+                "input.txt",
+                ">",
+                "output.txt"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Backjoon",
+            "request": "launch",
+            "mainClass": "twoPointer.Backjoon",
+            "projectName": "CodingTestStudy_cdeacc5f"
+        },
+        {
+            "type": "java",
+            "name": "Exam01",
+            "request": "launch",
+            "mainClass": "twoPointer.Exam01",
+            "projectName": "CodingTestStudy_cdeacc5f"
+        },
+        {
+            "type": "java",
+            "name": "Exam02",
+            "request": "launch",
+            "mainClass": "twoPointer.Exam02",
+            "projectName": "CodingTestStudy_cdeacc5f"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "twoPointer.Main",
+            "projectName": "CodingTestStudy_cdeacc5f",
+            "args": [
+                "<",
+                "input.txt",
+                ">",
+                "output.txt"
+            ]
+        }
+    ]
+}
