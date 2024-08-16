@@ -16,12 +16,22 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		char[] word = br.readLine().toCharArray();
 
-		String word = br.readLine();
-		StringBuilder sb = new StringBuilder();
+		int[] positions = new int[26];
+		for (int i = 0; i < 26; i++) {
+			positions[i] = -1;
+		}
 
-		for (int i = 97; i < 123; i++) {
-			sb.append(word.indexOf(i)).append(" ");
+		for (int i = 0; i < word.length; i++) {
+			if (positions[word[i] - 'a'] == -1) {
+				positions[word[i] - 'a'] = i;
+			}
+		}
+
+		StringBuilder sb = new StringBuilder(51);
+		for (int pos : positions) {
+			sb.append(pos).append(' ');
 		}
 
 		System.out.println(sb);
