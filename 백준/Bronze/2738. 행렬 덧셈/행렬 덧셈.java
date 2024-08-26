@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
 /*
 	문제
@@ -19,36 +18,27 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int m = Integer.parseInt(st.nextToken());
 
-		ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+		int[][] arr = new int[n][m];
 
-		for (int i = 0; i < n; i++) {
-			list.add(new ArrayList<>());
-			st = new StringTokenizer(br.readLine());
-			for (int j = 0; j < m; j++) {
+		for (int num = 0; num < 2; num++) {
+			for (int i = 0; i < n; i++) {
 
-				list.get(i).add(Integer.parseInt(st.nextToken()));
+				st = new StringTokenizer(br.readLine());
+				for (int j = 0; j < m; j++) {
+
+					arr[i][j] += Integer.parseInt(st.nextToken());
+				}
+
 			}
-
-		}
-
-		for (int i = 0; i < n; i++) {
-
-			st = new StringTokenizer(br.readLine());
-			for (int j = 0; j < m; j++) {
-
-				list.get(i).set(j, list.get(i).get(j) + Integer.parseInt(st.nextToken()));
-			}
-
 		}
 
 		StringBuilder sb = new StringBuilder();
-		for (ArrayList<Integer> row : list) {
-			for (int val : row) {
-				sb.append(val).append(" ");
+		for (int[] ints : arr) {
+			for (int anInt : ints) {
+				sb.append(anInt).append(" ");
 			}
 			sb.append("\n");
 		}
-
 
 		System.out.println(sb);
 	}
