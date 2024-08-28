@@ -24,20 +24,25 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 
-		String[] arr = new String[5];
+		String[] words = new String[5];
+		int maxLength = 0;
 
 		for (int i = 0; i < 5; i++) {
-			arr[i] = br.readLine();
+			words[i] = br.readLine();
+			maxLength = Math.max(maxLength, words[i].length());
 		}
 
-		for (int i = 0; i < 15; i++) {
+		for (int i = 0; i < maxLength; i++) {
 			for (int j = 0; j < 5; j++) {
-				if (i < arr[j].length()) {
-					System.out.print(arr[j].charAt(i));
+				if (i < words[j].length()) {
+					sb.append(words[j].charAt(i));
 				}
 			}
 		}
+
+		System.out.print(sb);
 	}
 
 }
